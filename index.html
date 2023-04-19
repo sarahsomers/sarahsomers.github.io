@@ -1,9 +1,9 @@
 <html>
+   
    <style>
     body {
-  background-color: lightblue;
-}
-      
+  background-color: light blue; 
+}   
     img {
   display: block;
   margin-left: auto;
@@ -22,8 +22,8 @@
     <body>
     <h1 style="color:DarkCyan;">Sarah's Portfolio</h1>
     <h3 style="color:LightSeaGreen;"> My personal portolio of web programming and design</h1>
-    <h4> sarahsomers82@yahoo.com </h2>
-    <h4> Call, text or email! <br>
+    <h4 style="color:LightSeaGreen;"> sarahsomers82@yahoo.com </h2>
+    <h4 style="color:LightSeaGreen;"> Call, text or email! <br>
         ph. 775-962-1782 <br>
        Github Username <br>
        LinkedIn link
@@ -31,7 +31,7 @@
     <img src=" IMG_9720.jpg" 
          width = "440"
          height = "600"/>
-    <p> Bio: My name is Sarah Somers and I live in rural Nevada.  I have been a school teacher for the past 8 years and prior to that had positions in district administrative duties and banking.  I have started a journey in web programming and web design and have enjoyed learning something new!  I chose this path because I wanted to do something new and it intrigued me. From that point, I realized I could enjoy it because I enjoy complex problem solving, design, and even love math, all of which seem to be helpful in the world of programming and web design.  Aside from work, I love travel, running and fitness, my dogs, reading and spending time with my teenage kids.  I also own a business, a fitness gym, which has been such a fun challenge.  I look forward to starting my new chapter in web design and programming.  Please reach out to me with any questions! </p>
+    <p style="color:LightSeaGreen;"> Bio: My name is Sarah Somers and I live in rural Nevada.  I have been a school teacher for the past 8 years and prior to that had positions in district administrative duties and banking.  I have started a journey in web programming and web design and have enjoyed learning something new!  I chose this path because I wanted to do something new and it intrigued me. From that point, I realized I could enjoy it because I enjoy complex problem solving, design, and even love math, all of which seem to be helpful in the world of programming and web design.  Aside from work, I love travel, running and fitness, my dogs, reading and spending time with my teenage kids.  I also own a business, a fitness gym, which has been such a fun challenge.  I look forward to starting my new chapter in web design and programming.  Please reach out to me with any questions! </p>
    Video Bio 
    </body>
 
@@ -65,24 +65,77 @@
 <body>
 
 <div class="grid-container">
-  <div class="item1">Sarah Somers <br>
-Designer and Programmer
+  <div class="item1"><h2 style="color:DarkCyan;">Sarah Somers</h2>
+<h3>Web Designer and Programmer</h3>
 <style>
 item1: {line-height: 1.8;}
 </style>
 </div>
-  <div class="item2">An Amazing Work Portfolio </div>
-  <div class="item3">My Bio <br>
-    My name is Sarah Somers and I live in rural Nevada.  I have been a school teacher for the past 8 years and prior to that had positions in district administrative duties and banking.  I have started a journey in web programming and web design and have enjoyed learning something new!  I chose this path because I wanted to do something new and it intrigued me. From that point, I realized I could enjoy it because I enjoy complex problem solving, design, and even love math, all of which seem to be helpful in the world of programming and web design.  Aside from work, I love travel, running and fitness, my dogs, reading and spending time with my teenage kids.  I also own a business, a fitness gym, which has been such a fun challenge.  I look forward to starting my new chapter in web design and programming.  Please reach out to me with any questions!</div>  
-  <div class="item4">My Contact Info <br>
-Ph. 775-962-1782 Call or Text <br>
-Email sarahsomers82@yahoo.com <br>
+  <div class="item2"> <style>
+    .dropbtn {
+      background-color: darkcyan;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropdown {
+      position: center;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+    </style>
+    </head>
+    <body>
+    
+    
+    <div class="dropdown" style="float:left;">
+      <button class="dropbtn">Work Portfolio</button>
+      <div class="dropdown-content" style="left:0;">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+      </div>
+    </div>
+</div>
+  <div class="item3"><h3 style="color:DarkCyan;">My Bio</h3> 
+    My name is Sarah Somers and I live in rural Nevada.  I have been a school teacher for the past 8 years and prior to that had positions in district administrative duties and banking.  I have started a journey in web programming and web design and have enjoyed learning something new!  I chose this path because I wanted to do something new and it intrigued me. From that point, I realized I could enjoy it because I enjoy complex problem solving, design, and even love math, all of which seem to be helpful in the world of programming and web design.  Aside from work, I love travel, running and fitness, my dogs, reading and spending time with my teenage kids.  I also own a business, a fitness gym, which has been such a fun challenge.  I look forward to starting my new chapter in web design and programming.  Please reach out to me with any questions! <br>
+Video Bio Link</div>  
+  <div class="item4"><h3 style="color:DarkCyan;">My Contact Info</h3>
+Ph. 775-962-1782 <br>
+sarahsomers82@yahoo.com <br>
+Call, text, or email <br>
 Github Link <br>
 Linkedn 
 </div>
-  <div class="item5"><img src=" IMG_9720.jpg" 
-         width = "200"
-         height = "300"/></div>
-</div>
+ 
+  
 
-        </html>
