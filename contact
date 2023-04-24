@@ -1,0 +1,167 @@
+<html>
+   
+   <style>
+    body {
+  background-color: dark blue; 
+}   
+    img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+      h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+       h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+   </style>
+</head>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Action
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="https://sarahsomers.github.io/">Home</a></li>
+    <li><a class="dropdown-item" href="https://sarahsomers.github.io/gallery.html">Gallery</a></li>
+    <li><a class="dropdown-item" href="#">Contact Info</a></li>
+     <li><a class="dropdown-item" href="https://www.canva.com/design/DAEc3JizRsU/__ahMDi24SpU2TmdhqzwHg/edit?utm_content=DAEc3JizRsU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Resume</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
+
+<ul> 
+    <style> {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #00008b;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+  <li><a href="https://sarahsomers.github.io/">Home</a></li>
+  <li><a href="https://sarahsomers.github.io/gallery.html">Gallery</a></li>
+  <li><a href="https://youtu.be/BR5YozBE4uk" target="_blank">Video Bio</a></li>
+  <li><a href="https://www.canva.com/design/DAEc3JizRsU/__ahMDi24SpU2TmdhqzwHg/edit?utm_content=DAEc3JizRsU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Resume</a></li>
+</ul>
+   
+  
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 10px;
+  background-color: #20c997;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="item1"><h2 style="color:DarkCyan;">Sarah Somers</h2>
+<h3>Contact Info <br>
+    Email or Text <br>
+    Phone after 4pm
+    </h3>
+
+</div>
+  <div class="item2"> <style>
+    .dropbtn {
+      background-color: darkcyan;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropdown {
+      position: center;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #f9f9f9;
+      min-width: 100px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 8px 12px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+    </style>
+    
+    </head>
+   
+  <div class="item3"><h3 style="color:DarkCyan;">Contact Info</h3> 
+    Ph. 775-962-1782 <br>
+sarahsomers82@yahoo.com <br>
+Call, text, or email <br>
+<a href="https://github.com/sarahsomers" target="_blank">Github</a> <br>
+<a href="https://www.linkedin.com/in/sarah-somers-21a79b254?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BxTexdzBhQU%2BINFBedh8x7Q%3D%3D" target="_blank">Linkedin Profile</a> 
+    <img src=" IMG_9720.jpg" 
+         width = "460"
+         height = "500"/>
+   </div>  
+  
