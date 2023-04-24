@@ -1,6 +1,18 @@
 <html>
   
-        <script>
+  <head>
+    <title>Pac-man</title>
+  </head>
+  <body>
+    <img
+      id="PacMan"
+      src="images/PacMan1.png"
+      width="200"
+      onclick="Run()"
+      style="position: absolute"
+    />
+
+   <script>
 var pos = 0;
 let pageWidth = window.innerWidth;
 const pacArray = [
@@ -36,4 +48,9 @@ function checkPageBounds(direction, imgWidth, pos, pageWidth) {
 module.exports = {checkPageBounds};
     
       </script>
+    
+  </body>
+</html>
+
+        
                                 </html>
