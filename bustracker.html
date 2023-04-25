@@ -6,37 +6,25 @@
     <title>Map Marker</title>
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
-    
-  
   <style>
-  body {
-  margin: 0;
-  padding: 0;
-}
-
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-      .map-overlay{
+  body {margin: 0; padding: 0;}
+  #map {position: absolute; top: 0; bottom: 0; width: 100%}
+  .map-overlay{
       position: absolute;
       left: 0;
-      padding: 10px;}
-  </style>
-    
-    <head> 
-        <body> 
-        <div id = "map"></div>
-        <div class= "map-overlay top"> 
-             <button style="font-size: 2em" onclick= "move ()">
-            Show stops between MIT and Harvard 
-            </button>
-        </div>
-        </body>
-    </head>
-  
+      padding: 10px;
+    }
+</style>
+</head>
+<body> 
+
+<div id = "map"></div>
+<div class= "map-overlay top"> 
+    <button style="font-size: 2em" onclick= "move ()">
+        Show stops between MIT and Harvard 
+    </button>
+</div>
+        
   <script> 
   var map = new mapboxgl.Map({
     container: 'map',
@@ -75,28 +63,6 @@ function move(){
     } , 1000)
 }
 
-  function createMapMarker() {
-  mapboxgl.accessToken =
-    'pk.eyJ1IjoidGVzdHVzZXIxMDAwIiwiYSI6ImNraDkzZ2pkMzAzMHoycnBmMXpvZ3UwZnMifQ.jAE4YsPeAJv50VK92NSpOQ';
-
-  let map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-71.091542, 42.358862],
-    zoom: 12,
-  });
-
-  let marker = new mapboxgl.Marker().setLngLat([-71.091542, 42.358862]).addTo(map);
-}
-
-window.onload = () => {
-  createMapMarker();
-};
-
-if (typeof module !== 'undefined') {
-  module.exports = { createMapMarker };
-}
-  </script>
-  
-</head>
+</script> 
+</body>
 </html>
