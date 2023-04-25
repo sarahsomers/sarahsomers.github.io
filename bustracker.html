@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Fetch data asynchronously</title>
+  </head>
+  <body>
+    <p>After calling `addLisbonDataToDocument(lisbonData, dataArray);`, refresh this mini-browser to see your results.</p>
+
+    (async function fetchData(dataArray = []) {
+  const makeRequest = async function (url) {
+    const response = await fetch(url);
+    const data = await response.text();
+    return data;
+  };
+
+  const addLisbonDataToDocument = (data, dataArr = []) => {
+    // validate data format and data
+    data = JSON.parse(data);
+    if (data.name !== 'Lisbon') {
+      data = null;
+    }
+
+    let arrayLengthDiv = document.createElement('div');
+    arrayLengthDiv.innerHTML = `<div id="array-length-div">Data Items:${dataArr.length}</div>`;
+    document.body.appendChild(arrayLengthDiv);
+
+    let lisbonDiv = document.createElement('div');
+    lisbonDiv.innerHTML = `<div id="lisbon-data-div">Weather:${JSON.stringify(data)}</div>`;
+    document.body.appendChild(lisbonDiv);
+  };
+
+  const urlArray = [
+    'https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7b68bf0910a2a7530b9929d01904bc79',
+    'https://api.openweathermap.org/data/2.5/weather?q=Houston&APPID=7b68bf0910a2a7530b9929d01904bc79',
+    'https://api.openweathermap.org/data/2.5/weather?q=Lisbon&APPID=7b68bf0910a2a7530b9929d01904bc79',
+    'https://api.openweathermap.org/data/2.5/weather?q=Baltimore&APPID=7b68bf0910a2a7530b9929d01904bc79',
+  ];
+
+  urlArray.forEach(async (url) => {
+    makeRequest(url).then(function (result) {
+     
+      dataArray.push(result);
+      if (dataArray.length == urlArray.length) {
+        
+        dataArray.forEach((item) => {
+          if (JSON.parse(item).name == 'Lisbon') {
+           
+            addLisbonDataToDocument(item, dataArray);
+          }
+        });
+        
+        return dataArray;
+      }
+    });
+  });
+})();
+
+
+if (typeof module !== 'undefined') {
+  module.exports = { fetchData };
+}
+  </body>
+</html>
