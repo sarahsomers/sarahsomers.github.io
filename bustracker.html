@@ -20,7 +20,22 @@
   bottom: 0;
   width: 100%;
 }
+      .map-overlay{
+      position: absolute;
+      left: 0;
+      padding: 10px;}
   </style>
+    
+    <head> 
+        <body> 
+        <div id = "map"></div>
+            <div class= "map-overlay top"> 
+                <button style="font-size: 2em" onclick= "move ()">
+                    Show stops between MIT and Harvard 
+                </button>
+            </div>
+        </body>
+    </head>
   
   <script> 
   function createMapMarker() {
