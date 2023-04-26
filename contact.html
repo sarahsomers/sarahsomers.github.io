@@ -1,83 +1,67 @@
 <html>
-
-<head>
+   
    <style>
-   body {
-  margin: 0;
-  padding: 0;
+    body {
+  background-color: dark blue; 
+}   
+    
+      h1 {
+  font-family: Arial, Helvetica, sans-serif;
 }
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
+       h3 {
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-.map-overlay {
-  position: absolute;
-  left: 0;
-  padding: 10px;
+   </style>
+</head>
+<body>
+   <ul>
+  <li><a href="https://sarahsomers.github.io/home.html">Home</a></li>
+  <li><a href="https://sarahsomers.github.io/gallery.html">Gallery</a></li>
+  <li><a href="https://sarahsomers.github.io/contact.html">Contact Info</a></li>
+  <li><a href="https://www.canva.com/design/DAEc3JizRsU/__ahMDi24SpU2TmdhqzwHg/edit?utm_content=DAEc3JizRsU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Resume</a></li>
+</ul>
+   
+  
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 8px;
+  background-color: black;
+  padding:8px;
+}
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px
 }
 </style>
-   
-    <meta charset="utf-8" />
-    <title>Map Animation</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
-    
 </head>
-
 <body>
-    <div id="map"></div>
-    <div class="map-overlay top">
-        <button style="font-size: 2em" onclick="move()">
-            Show stops between MIT and Harvard
-        </button>
-    </div>
+<div class="grid-container">
+  <div class="item1"><h1 style="color:DarkCyan;">Sarah Somers</h1>
+     <h2>Contact Info</h2> 
+    <h4>Email or Text <br>
+    <h3>Email or Text <br>
+    Phone after 4pm
+    </h4>
+    </h3>
+
+  <div class="item3"><h3 style="color:DarkCyan;">Contact Info</h3> 
+    Ph. 775-962-1782 <br>
+sarahsomers82@yahoo.com <br>
+Call, text, or email <br>
+<a href="https://github.com/sarahsomers" target="_blank">Github</a> <br>
+<a href="https://www.linkedin.com/in/sarah-somers-21a79b254?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BxTexdzBhQU%2BINFBedh8x7Q%3D%3D" target="_blank">Linkedin Profile</a> 
    
-    <script>
-       var map = new mapboxgl.Map({
-    container: 'map',
-    style: "mapbox://styles/mapbox/streets-v11',
-    center: [-71.104081, 42.365554]
-    zoom: 14
-
-  })
-  
-  var marker = new mapbox.glMarker()
-  .setLngLat ([-71.092761, 42.357575])
-  .addTo(map);
-
-  const busStops = [
-  [-71.093729, 42.359244],
-  [-71.094915, 42.360175],
-  [-71.0958, 42.360698],
-  [-71.099558, 42.362953],
-  [-71.103476, 42.365248],
-  [-71.106067, 42.366806],
-  [-71.108717, 42.368355],
-  [-71.110799, 42.369192],
-  [-71.113095, 42.370218],
-  [-71.115476, 42.372085],
-  [-71.117585, 42.373016],
-  [-71.118625, 42.374863],
-];
-
-var counter=0
-function move(){
-    setTimeout(() =>{
-    if (counter >= busStops.length) return;
-    marker.setLngLat(busStops[counter]);
-    counter++;
-    move();
-    } , 1000)
-}
-
-</script> 
-</body>
-</html>
-   </script>
-</body>
-
-</html>
+   </div>  
+     </html>
